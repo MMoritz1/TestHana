@@ -1,0 +1,9 @@
+FUNCTION "MINI"."playground.1raobr::TableFuncDT2" ( ) 
+	RETURNS TABLE (K4 VARCHAR (2), M2 DECIMAL)
+	LANGUAGE SQLSCRIPT
+ 	SQL SECURITY INVOKER 
+ 	DEFAULT SCHEMA MINI AS 
+BEGIN  
+ 	 var_out = select K4, M2 from "MINI"."TF1" ;
+return :var_out;
+END;
